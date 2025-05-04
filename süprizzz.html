@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Benimle Çıkar Mısın?</title>
+  <style>
+    body {
+      background: #ffe4e1;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #e91e63;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+    .buttons {
+      margin-top: 30px;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #yesBtn {
+      background-color: #4caf50;
+      color: white;
+    }
+    #noBtn {
+      background-color: #f44336;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Selam 😊</h1>
+    <p>
+      Seni uzun zamandır tanıyorum ve her geçen gün sana olan hislerim artıyor.<br>
+      Seninle konuşmak, gülmek ve zaman geçirmek bana kendimi çok mutlu hissettiriyor.<br>
+      Bu yüzden sana küçük ama özel bir soru sormak istiyorum...
+    </p>
+
+    <h2>Benimle çıkar mısın? 💖</h2>
+
+    <div class="buttons">
+      <button id="yesBtn" onclick="alert('İŞTE BUUUUU Teşekkür ederimmmm AŞKIMMMM! ❤️')">Evet</button>
+      <button id="noBtn" onmouseover="moveButton()">Hayır</button>
+    </div>
+  </div>
+
+  <script>
+    function moveButton() {
+      const btn = document.getElementById("noBtn");
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+      btn.style.position = "absolute";
+      btn.style.left = x + "px";
+      btn.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
